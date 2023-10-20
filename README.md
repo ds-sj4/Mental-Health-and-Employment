@@ -1,1 +1,2 @@
 # Mental-Health-and-Employment
+# Mental illness is usually treated with great disdain in the workplace causing unfriendly working environment and unemployment among people suffering or diagnosed with previous mental disorders. The aim of the study was to explore the association between the mental health conditions and the employment rates in the city of London using descriptive statistics, supervised learning such as regression analysis, classification and so on, and unsupervised learning such as clustering analysis.
