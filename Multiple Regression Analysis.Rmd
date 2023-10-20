@@ -1,0 +1,30 @@
+---
+title: "Mental Health and Employment"
+author: "u2255602"
+date: "2023-01-04"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+df <- read.csv("Analysis.csv", header = TRUE)
+```
+
+```{r}
+reg <- lm(df$Employment.Rate ~ df$Any.neurotic.disorder.Rates.per.1000.population + df$All.phobias.Rates.per.1000.population + df$Depressive.episode.Rates.per.1000.population + df$Generalised.anxiety.disorder.Rates.per.1000.population + df$Mixed.anxiety.depression.Rates.per.1000.population + df$Obsessive.compulsive.disorder.Rates.per.1000.population + df$Panic.disorder.Rates.per.1000.population, df)
+summary(reg)
+```
+
+```{r}
+library(car)
+avPlots(reg)
+```
+
+```{r}
+reg1 <- lm(df$Employment.Rate ~ df$Any.neurotic.disorder.Rates.per.1000.population + df$All.phobias.Rates.per.1000.population + df$Generalised.anxiety.disorder.Rates.per.1000.population + df$Mixed.anxiety.depression.Rates.per.1000.population + df$Obsessive.compulsive.disorder.Rates.per.1000.population, df)
+summary(reg1)
+```
+
+```{r}
+avPlots(reg1)
+```
